@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import random
-number = int(random.randint(-10000, 10000))
+number = random.randint(-10000, 10000)
+number = int(number)
 num = number
 d = 1000
 if num < 0:
