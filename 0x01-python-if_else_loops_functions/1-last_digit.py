@@ -13,7 +13,6 @@ for i in range(3):
     num %= d
     d /= 10
 num = int(num)
-
 if neg_num < 0:
     num *= -1
     if num > 5:
@@ -29,4 +28,3 @@ else:
         print(f"Last digit of {number:d} is {num:d} and is 0")
     elif num < 6 and not 0:
         print(f"Last digit of {number:d} is {num:d} and is less than 6 and not 0")
-
