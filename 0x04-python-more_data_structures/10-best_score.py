@@ -7,6 +7,6 @@ def best_score(a_dictionary):
         for i in dlist:
             if a_dictionary[largK] < a_dictionary[i]:
                 largK = i
-            return largK
+        return largK
     else:
         return
