@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def copy_list(length):
-	retrun length[:]
+    return length[:]
