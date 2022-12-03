@@ -16,10 +16,11 @@ def list_all():
     cur = conn.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC;")
     query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    if query_rows:
+        for row in query_rows:
+            print(row)
     cur.close()
-    conn.close
+    conn.close()
 
 if __name__ == '__main__':
     list_all()
