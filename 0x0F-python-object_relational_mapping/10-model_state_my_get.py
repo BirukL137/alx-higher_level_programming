@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''A script that prints the State object with the name passed as argument from the dB'''
+'''A script lists state object with the name passed as argument from the dB'''
 
 from model_state import Base, State
 from sqlalchemy import create_engine
