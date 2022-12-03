@@ -4,23 +4,25 @@
 import MySQLdb
 import sys
 
+
 def list_all():
-    '''A function that lists all states from the database'''
+    '''A function that lists all states in db'''
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
     host = 'localhost'
     port = 3306
-    conn = MySQLdb.connect(host=host, port=port, user=username, passwd=password, db=db_name, charset="utf8")
-
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC;")
-    query_rows = cur.fetchall()
+    db = MySQLdb.connect(host=host, user=username, passwd=password,
+                         db=db_name, port=port)
+    cur = db.cursor()
+    cur.execute('SELECT * FROM states ORDER BY id ASC;')
+    result = cur.fetchall()
     cur.close()
-    conn.close()
-    if query_rows:
-        for row in query_rows:
+    db.close()
+    if result:
+        for row in result:
             print(row)
+
 
 if __name__ == '__main__':
     list_all()
