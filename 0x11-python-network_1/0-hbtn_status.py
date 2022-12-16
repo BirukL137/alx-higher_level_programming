@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-""" A Python script that fetches https://alx-intranet.hbtn.io/status """
+"""  fetches https://alx-intranet.hbtn.io/status """
 
 if __name__ == "__main__":
     from urllib.request import urlopen, Request
@@ -11,6 +10,6 @@ if __name__ == "__main__":
         content = res.read()
 
     print("Body response:")
-    print("\t- type: ".format(type(content)))
-    print("\t- content: ".format(content))
-    print("\t- utf8 content: ".format(content.decode('utf-8')))
+    print(f"\t- type: {type(content)}")
+    print(f"\t- content: {content}")
+    print(f"\t- utf8 content: {content.decode('utf-8')}")
