@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A Python script that displays the body of the response (decoded in utf-8)."""
+"""A Python script that displays the body of the response"""
 from sys import argv
 from urllib.request import urlopen
 from urllib.error import HTTPError
